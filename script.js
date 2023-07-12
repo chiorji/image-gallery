@@ -50,7 +50,9 @@ const displayPhotos = () => {
 
     img.addEventListener("load", imageLoaded);
     item.appendChild(img);
-    imageContainer.appendChild(item);
+    const fragment = new DocumentFragment();
+    fragment.append(item);
+    imageContainer.append(fragment);
   });
 };
 
